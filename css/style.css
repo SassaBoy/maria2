@@ -157,6 +157,10 @@ a:focus {
     transition: .5s;
     
 }
+.navbar .navbar-brand:hover {
+    color: #EF233C;
+        }
+        
 
 .navbar .navbar-brand img {
     max-width: 100%;
@@ -208,7 +212,7 @@ a:focus {
 
     .navbar-light .navbar-nav .nav-link:hover,
     .navbar-light .navbar-nav .nav-link.active {
-        color: #111111;
+        color: #EF233C;
     }
     
     .navbar-light.nav-sticky .navbar-nav .nav-link:hover,
@@ -226,7 +230,7 @@ a:focus {
     .navbar .navbar-brand {
         color: #EF233C;
     }
-    
+  
     .navbar .navbar-nav {
         margin-top: 15px;
     }
@@ -250,7 +254,7 @@ a:focus {
     margin-bottom: 45px;
     padding: 120px 0 0 0;
     overflow: hidden;
-    background: linear-gradient(black, black), url(../img/hero-bg.jpg);
+    background: linear-gradient(to bottom, #000000, #333333), url(../img/hero-bg.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -736,188 +740,56 @@ a:focus {
 /*******************************/
 /********* Service CSS *********/
 /*******************************/
+/* Service Section */
 .service {
-    position: relative;
-    width: 100%;
-    padding: 45px 0 15px 0;
-}
-
-.service .service-item {
-    position: relative;
-    margin-bottom: 30px;
-    display: flex;
-    align-items: center;
-    box-shadow: inset 0 0 0 0 transparent;
-    transition: ease-out 0.5s;
-}
-
-.service .service-item:hover {
-    box-shadow: inset 800px 0 0 0 #EF233C;
-}
-
-.service .service-icon {
-    position: relative;
-    width: 150px;
-    min-height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #EF233C;
-    background: #ffffff;
-}
-
-.service .service-icon i {
-    position: relative;
-    font-size: 60px;
-    color: #EF233C;
-    transition: .3s;
-}
-
-.service .service-item:hover i {
-    font-size: 75px;
-}
-
-.service .service-text {
-    position: relative;
-    width: calc(100% - 120px);
-    padding: 0 30px;
-}
-
-.service .service-text h3 {
-    margin-bottom: 10px;
-    font-size: 20px;
-    font-weight: 600;
-    transition: 1s;
-}
-
-.service .service-text p {
-    margin: 0;
-    font-size: 16px;
-    transition: 1s;
-}
-
-.service .service-item:hover .service-text h3,
-.service .service-item:hover .service-text p {
-    color: #ffffff;
-}
-
-@media (max-width: 575.98px) {
-    .service .service-text h3 {
-        font-size: 16px;
-        margin-bottom: 5px;
-    }
-    
-    .service .service-text p {
-        font-size: 14px;
-    }
-}
-
-
-/*******************************/
-/******** Portfolio CSS ********/
-/*******************************/
-.portfolio {
-    position: relative;
-    padding: 45px 0 15px 0;
-}
-
-.portfolio #portfolio-filter {
-    padding: 0;
-    margin: -15px 0 25px 0;
-    list-style: none;
-    font-size: 0;
+    padding: 80px 0;
     text-align: center;
+    color: #fff;
+   
 }
 
-.portfolio #portfolio-filter li {
-    cursor: pointer;
-    display: inline-block;
-    margin: 5px;
-    padding: 6px 12px;
-    font-size: 14px;
-    font-weight: 600;
-    color: #ffffff;
-    background: #EF233C;
-    border: 2px solid transparent;
-    border-radius: 0;
-    box-shadow: inset 0 0 0 50px #EF233C;
-    transition: ease-out 0.3s;
-    -webkit-transition: ease-out 0.3s;
-    -moz-transition: ease-out 0.3s;
+.service p {
+    margin-bottom: 30px;
 }
 
-.portfolio #portfolio-filter li:hover,
-.portfolio #portfolio-filter li.filter-active {
-    color: #EF233C;
-    background: transparent;
-    box-shadow: inset 0 0 0 0 #EF233C;
-    border-color: #EF233C;
+.service-icon {
+    font-size: 36px;
+    margin-bottom: 20px;
 }
 
-.portfolio .portfolio-item {
-    position: relative;
+.service-item h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
 }
 
-.portfolio .portfolio-wrap {
-    position: relative;
-    width: 100%;
+.service-item p {
+    font-size: 16px;
 }
 
-.portfolio .portfolio-img {
-    position: relative;
-    overflow: hidden;
+/* Add a white line on top of every service item */
+.service-item {
+    position: relative; /* Ensure proper positioning of pseudo-element */
+    margin-top: 50px;
 }
 
-.portfolio .portfolio-img img {
-    position: relative;
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover;
-    transform: scale(1.1);
-    transition: .5s;
+.service-item::before {
+    content: ''; /* Add content for pseudo-element */
+    position: absolute; /* Set position to absolute */
+    top: 0; /* Position at the top of the service item */
+    left: 50%; /* Center the line horizontally */
+    transform: translateX(-50%); /* Center the line horizontally */
+    width: 80%; /* Set the width of the line */
+    height: 2px; /* Set the height of the line */
+    background-color: #fff; /* Set the color of the line to white */
+
 }
 
-.portfolio .portfolio-item:hover img {
-    margin-left: 15px;
+
+.service-item:hover .service-icon {
+    color: #EF233C; /* Change icon color on hover */
 }
 
-.portfolio .portfolio-text {
-    position: relative;
-    height: 60px;
-    width: calc(100% - 30px);
-    margin: -30px 15px 30px 15px;
-    display: flex;
-    align-items: center;
-    background: #ffffff;
-    box-shadow: 0 0 15px rgba(0, 0, 0, .12);
-}
-
-.portfolio .portfolio-text h3 {
-    width: calc(100% - 70px);
-    font-size: 18px;
-    font-weight: 600;
-    margin: 0 0 0 15px;
-    white-space: nowrap;
-    overflow: hidden;
-}
-
-.portfolio .portfolio-text a.btn {
-    width: 50px;
-    height: 50px;
-    padding: 0 0 2px 1px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 45px;
-    font-weight: 100;
-}
-
-.portfolio .portfolio-item:hover a.btn {
-    color: #EF233C;
-    background: transparent;
-    box-shadow: inset 0 0 0 0 #EF233C;
-    border-color: #EF233C;
-}
 
 
 /*******************************/
@@ -1097,298 +969,74 @@ a:focus {
 }
 
 
-/*******************************/
-/*********** Team CSS **********/
-/*******************************/
-.team {
-    position: relative;
-    width: 100%;
-    padding: 45px 0 15px 0;
-}
+/* Styling for Me At Work Section */
 
-.team .team-item {
-    position: relative;
-    background: #ffffff;
-    margin-bottom: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    box-shadow: inset 0 0 0 0 transparent;
-    transition: ease-out 0.5s;
-}
 
-.team .team-img {
-    position: relative;
-    width: 50%;
+
+
+.work-img {
     overflow: hidden;
-}
-
-.team .team-img img {
-    position: relative;
-    width: 100%;
-    transition: .5s;
-}
-
-.team .team-text {
-    position: relative;
-    width: 50%;
-    padding: 0 30px;
-}
-
-.team .team-text h2 {
-    color: #EF233C;
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 5px;
-    transition: 1s;
-}
-
-.team .team-text h4 {
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 15px;
-    transition: 1s;
-}
-
-.team .team-text p {
+    border-radius: 10px; /* Add border radius for rounded corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add shadow effect */
     margin-bottom: 20px;
-    transition: 1s;
 }
 
-.team .team-social {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+.work-img img {
+    width: 100%;
+    transition: transform 0.3s ease; /* Add transition effect */
+    height: 50%;
 }
 
-.team .team-social a.btn {
-    width: 35px;
-    height: 35px;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    font-weight: normal;
-    margin-right: 5px;
+.work-img img:hover {
+    transform: scale(1.1); /* Enlarge image on hover */
 }
-
-.team .team-item:hover {
-    box-shadow: inset 800px 0 0 0 #EF233C;
-}
-
-.team .team-item:hover .team-img img {
-    transform: scale(1.2);
-}
-
-.team .team-item:hover .team-text h2,
-.team .team-item:hover .team-text h4,
-.team .team-item:hover .team-text p {
-    color: #ffffff;
-}
-
-.team .team-item:hover .team-social a.btn {
-    background: #ffffff;
-}
-
-.team .team-item:hover .team-social a.btn:hover {
-    border-color: #ffffff;
-}
-
-@media(max-width: 575.98px) {
-    .team .team-text {
-        padding: 0 15px;
-    }
-    
-    .team .team-text h2 {
-        font-size: 16px;
-        margin-bottom: 0;
-    }
-
-    .team .team-text h4 {
-        margin-bottom: 5px;
-    }
-
-    .team .team-text p {
-        font-size: 14px;
-        line-height: 18px;
-        margin-bottom: 10px;
-    }
-}
-
-
-/*******************************/
-/******* Testimonial CSS *******/
-/*******************************/
-.testimonial {
-    position: relative;
-    margin: 45px 0;
-    padding: 90px 0;
-    background: #EF233C;
-}
-
-.testimonial .container {
-    max-width: 900px;
-}
-
-.testimonial .testimonial-icon {
-    margin-bottom: 45px;
-    text-align: center;
-}
-
-.testimonial .testimonial-icon i {
-    font-size: 60px;
-    color: rgba(256, 256, 256, .5);
-}
-
-.testimonial .testimonial-item {
-    position: relative;
-    margin: 0 15px;
-    text-align: center;
-}
-
-.testimonial .testimonial-img {
-    position: relative;
-    margin-bottom: 15px;
-    z-index: 1;
-}
-
-.testimonial .testimonial-item img {
-    margin: 0 auto;
-    width: 120px;
-    padding: 10px;
-    border: 5px dotted #ffffff;
-    border-radius: 100px;
-}
-
-.testimonial .testimonial-text {
-    position: relative;
-    margin-top: -70px;
-    padding: 65px 35px 30px 35px;
-    text-align: center;
-    background: #ffffff;
-    border-radius: 500px;
-}
-
-.testimonial .testimonial-item p {
-    font-size: 18px;
-    font-style: italic;
-}
-
-.testimonial .testimonial-text h3 {
-    color: #EF233C;
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-.testimonial .testimonial-text h4 {
-    color: #666666;
-    font-size: 14px;
-    margin-bottom: 0;
-}
-
-.testimonial .owl-dots {
-    margin-top: 15px;
-    text-align: center;
-}
-
-.testimonial .owl-dot {
-    display: inline-block;
-    margin: 0 5px;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: rgba(256, 256, 256, .5);
-}
-
-.testimonial .owl-dot.active {
-    background: #ffffff;
-}
-
 
 /*******************************/
 /********* Contact CSS *********/
 /*******************************/
-.contact {
-    position: relative;
+
+.work-with-me {
+    padding: 80px 0;
+}
+
+.work-image img {
     width: 100%;
-    margin: 45px 0;
-    background: #EF233C;
+    display: block;
+    border-radius: 8px;
 }
 
-.contact .container-fluid {
-    background: url(../img/contact.jpg) left center no-repeat;
-    background-size: contain;
+.contact-details h3 {
+    color: #333;
+    font-size: 32px;
+    margin-bottom: 20px;
 }
 
-.contact .contact-form {
-    position: relative;
-    padding: 90px 0 90px 45px;
-    background: #EF233C;
+.contact-details h4 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 15px;
 }
 
-.contact .contact-form input {
-    color: #ffffff;
-    padding: 15px 0;
-    background: none;
-    border-radius: 0;
-    border: none;
-    border-bottom: 1px solid rgba(256, 256, 256, .5);
+.contact-details p {
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
-.contact .contact-form textarea {
-    color: #ffffff;
-    height: 90px;
-    padding: 15px 0;
-    background: none;
-    border-radius: 0;
-    border: none;
-    border-bottom: 1px solid rgba(256, 256, 256, .5);
+.social-links h4 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 15px;
 }
 
-.contact .contact-form .form-control::placeholder {
-    color: #ffffff;
-    opacity: 1;
+.social-links a {
+    display: inline-block;
+    margin-right: 15px;
+    color: #333;
+    font-size: 24px;
 }
 
-.contact .contact-form .form-control:-ms-input-placeholder,
-.contact .contact-form .form-control::-ms-input-placeholder {
-    color: #ffffff;
-}
-
-.contact .contact-form .btn {
-    margin-top: 35px;
+.social-links a:hover {
     color: #EF233C;
-    background: #ffffff;
-    box-shadow: inset 0 0 0 50px #ffffff;
-}
-
-.contact .contact-form .btn:hover {
-    color: #ffffff;
-    background: transparent;
-    box-shadow: inset 0 0 0 0 #ffffff;
-    border-color: #ffffff;
-}
-
-.contact .help-block ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    font-size: 14px;
-    font-style: italic;
-    color: #ffffff;
-}
-
-@media (max-width: 767.98px) {
-    .contact .container-fluid {
-        background: none;
-    }
-    
-    .contact .contact-form {
-        padding: 90px 0;
-    }
 }
 
 
@@ -1474,8 +1122,9 @@ a:focus {
 .footer {
     position: relative;
     margin-top: 45px;
-    background: #EF233C;
+    background: linear-gradient(to bottom, #000000, #333333); /* Adjust the colors as needed */
 }
+
 
 .footer .container-fluid {
     padding: 60px 0 0 0;
