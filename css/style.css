@@ -1122,7 +1122,7 @@ a:focus {
 .footer {
     position: relative;
     margin-top: 45px;
-    background: linear-gradient(to bottom, #000000, #333333); /* Adjust the colors as needed */
+    background: linear-gradient(to bottom, black, black); /* Adjust the colors as needed */
 }
 
 
