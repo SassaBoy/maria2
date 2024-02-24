@@ -474,6 +474,71 @@ a:focus {
 }
 
 
+/* Styling for the About Me box */
+.about-me-box {
+    position: absolute;
+    top: 250px; /* Adjust positioning as needed */
+    right: -80px;
+    padding: 20px;
+
+    color: white; /* Text color */
+    z-index: 999; /* Ensure the box appears above images */
+    width: 80%; /* Adjust width as needed */
+    max-width: 400px; /* Limit maximum width for responsiveness */
+    height: 100%; /* Let height adjust based on content */
+}
+
+.about-me-box h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.about-me-box p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Media query for small devices */
+@media (max-width: 768px) {
+    .about-me-box {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 100%; /* Take full width on small devices */
+        margin-top: 20px; /* Adjust spacing */
+        padding: 15px; /* Adjust padding */
+        height: auto;
+    }
+
+    .about-me-box h2 {
+        font-size: 20px; /* Decrease font size for headings */
+    }
+
+    .about-me-box p {
+        font-size: 14px; /* Decrease font size for paragraphs */
+    }
+}
+
+/* Styling for the short image */
+.col-lg-12 img {
+    margin-top: 30px; /* Adjust margin as needed */
+    position: relative;
+}
+
+/* Center the short image horizontally */
+.col-lg-12 img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Styling for the long image */
+.col-lg-6 img {
+    width: 100%;
+    height: auto;
+}
+
+
 /*******************************/
 /********** About CSS **********/
 /*******************************/
@@ -736,6 +801,30 @@ a:focus {
     }
 }
 
+.cool-heading {
+    font-size: 36px; /* Adjust font size as desired */
+    color: #EF233C; /* Blue color */
+    text-align: center; /* Center align text */
+    margin-top: 100px; /* Move down 50 pixels */
+    text-transform: uppercase; /* Convert text to uppercase */
+    letter-spacing: 2px; /* Add letter spacing */
+    font-weight: bold; /* Make text bold */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow */
+    margin-left: -140PX; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+    max-width: 80%; /* Limit maximum width */
+}
+
+/* Media query for small devices */
+@media (max-width: 768px) {
+    .cool-heading {
+        font-size: 24px; /* Decrease font size for small devices */
+        margin-top: 30px; /* Adjust margin-top for small devices */
+        letter-spacing: 1px; /* Decrease letter spacing for small devices */
+        margin-left: auto;
+    }
+}
+
 
 /*******************************/
 /********* Service CSS *********/
@@ -745,6 +834,8 @@ a:focus {
     padding: 80px 0;
     text-align: center;
     color: #fff;
+    width: 100%;
+    height: 100%;
    
 }
 
@@ -761,6 +852,7 @@ a:focus {
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 15px;
+    color: white;
 }
 
 .service-item p {
@@ -776,12 +868,14 @@ a:focus {
 .service-item::before {
     content: ''; /* Add content for pseudo-element */
     position: absolute; /* Set position to absolute */
-    top: 0; /* Position at the top of the service item */
+    top: -30px; /* Position at the top of the service item */
     left: 50%; /* Center the line horizontally */
     transform: translateX(-50%); /* Center the line horizontally */
+    bottom: -70px;
     width: 80%; /* Set the width of the line */
     height: 2px; /* Set the height of the line */
     background-color: #fff; /* Set the color of the line to white */
+    
 
 }
 
@@ -997,6 +1091,9 @@ a:focus {
 
 .work-with-me {
     padding: 80px 0;
+    width: 100%;
+    background: black;
+    margin-bottom: -70px;
 }
 
 .work-image img {
@@ -1006,13 +1103,13 @@ a:focus {
 }
 
 .contact-details h3 {
-    color: #333;
+    color: white;
     font-size: 32px;
     margin-bottom: 20px;
 }
 
 .contact-details h4 {
-    color: #333;
+    color: white;
     font-size: 24px;
     margin-bottom: 15px;
 }
@@ -1023,7 +1120,7 @@ a:focus {
 }
 
 .social-links h4 {
-    color: #333;
+    color: white;
     font-size: 24px;
     margin-bottom: 15px;
 }
@@ -1031,7 +1128,7 @@ a:focus {
 .social-links a {
     display: inline-block;
     margin-right: 15px;
-    color: #333;
+    color: white;
     font-size: 24px;
 }
 
