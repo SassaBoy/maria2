@@ -477,12 +477,11 @@ a:focus {
 /* Styling for the About Me box */
 .about-me-box {
     position: absolute;
-    top: -1px; 
-    /* right: -80px; */
-    padding: 20px;
-   left: 90px;
+    top: 20px; 
+   
+   left: 50px;
     color: black; /* Text color */
-    z-index: 999; /* Ensure the box appears above images */
+   
     width: 80%; /* Adjust width as needed */
     max-width: 400px; /* Limit maximum width for responsiveness */
     height: 100%; /* Let height adjust based on content */
@@ -495,7 +494,7 @@ a:focus {
 
 .about-me-box p {
     font-size: 18px;
-    line-height: 1.2;
+    line-height: 1.6;
 }
 
 /* Media query for small devices */
@@ -555,6 +554,10 @@ a:focus {
         margin: 50px auto; /* Center the section horizontally */
         max-width: 80%; /* Limit width on small devices for better readability */
     }
+    .about .about-content {
+        padding: 0 10px; /* Adjusted padding */
+        margin: 0; /* Reset margin for better alignment */
+    }
 }
 
 .about .col-lg-6 {
@@ -580,19 +583,35 @@ a:focus {
 
 .about .about-content {
     padding: 0 10px; /* Adjusted padding */
+    margin-left: 50px;
+    margin-right: 90px;
 }
 
 .about .about-text p {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.6;
+}
+
+.about .section-header h2 {
+    font-size: 36px;
 }
 
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
     .about .about-text p {
-        font-size: 18px; /* Decrease font size for smaller screens */
-        line-height: 1.6; /* Keep line height consistent */
+        font-size: 16px; /* Decrease font size for smaller screens */
+        line-height: 1.5; /* Adjust line height for smaller screens */
         text-align: left; /* Reset text alignment */
+    }
+    
+    .about .about-content {
+        margin: 0; /* Reset margin for better alignment */
+    }
+    .about .section-header h2 {
+        font-size: 27px;
+    }
+    .about .about-img {
+        margin-bottom: 20px; /* Adjust margin for better spacing */
     }
 }
 
@@ -609,43 +628,55 @@ a:focus {
 }
 
 .language {
-    width: calc(50% - 10px);
-    margin-bottom: 10px;
-    align-items: center;
+    width: calc(33.33% - 20px); /* Three languages per line with spacing */
+    margin-bottom: 20px; /* Increased margin for better separation */
 }
 
-.language .language-progress p {
-    text-align: center;
-    margin-bottom: 0;
+.language-progress .language p {
+    margin-bottom: 20px;
+    margin-left: 1px;
+}
+
+.progress-container {
+    width: 100%;
+    height: 30px; /* Height of the progress bar */
+    background-color: #ddd; /* Background color for the remaining progress */
+    border-radius: 5px;
+    position: relative;
+    
 }
 
 .progress-bar {
-    height: 20px;
+    height: 100%;
     background-color: #EF233C;
-    border-radius: 5px;
+    margin-right: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
     transition: width 0.5s ease-in-out;
-    position: relative;
-    margin-left: 40px;
 }
 
 .progress-bar span {
     position: absolute;
     top: 50%;
-    left: 20%;
+    left: 50%;
     transform: translate(-50%, -50%);
     color: white;
     font-size: 12px;
 }
 
-.language p {
-    margin-bottom: 0;
-    margin-right: 10px;
+/* Adjust progress bar width */
+.language .progress-bar {
+    width: calc(92% + (100% - 92%)); /* Set the progress bar width to fill the remaining space */
 }
+
+
 
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
     .language {
         width: 100%; /* Make languages occupy full width on smaller screens */
+        margin-left: auto;
     }
 }
 
@@ -669,12 +700,12 @@ a:focus {
     font-size: 36px; /* Adjust font size as desired */
     color: #EF233C; /* Blue color */
     text-align: center; /* Center align text */
-    margin-top: 100px; /* Move down 50 pixels */
+    margin-top: 80px; /* Move down 50 pixels */
     text-transform: uppercase; /* Convert text to uppercase */
     letter-spacing: 2px; /* Add letter spacing */
     font-weight: bold; /* Make text bold */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow */
-    margin-left: -140PX; /* Center horizontally */
+    margin-left: -208PX; /* Center horizontally */
     margin-right: auto; /* Center horizontally */
     max-width: 80%; /* Limit maximum width */
 }
@@ -686,6 +717,7 @@ a:focus {
         margin-top: 30px; /* Adjust margin-top for small devices */
         letter-spacing: 1px; /* Decrease letter spacing for small devices */
         margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -986,12 +1018,12 @@ a:focus {
 /********* Contact CSS *********/
 /*******************************/
 
-.work-with-me {
+/* .work-with-me {
     padding: 80px 0;
     width: 100%;
     background: white;
     margin-bottom: -70px;
-}
+} */
 
 .work-image img {
     width: 100%;
